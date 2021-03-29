@@ -11,10 +11,20 @@
 ###### 3. A.makeREF()   : This method whould convert the matrix to corrosponding REF matrix.
 ###### 4. A.makeRREF()  : This method whould convert the matrix to corrosponding RREF matrix.
 
-#### Matrix Operations :
-###### Matrix A, B;             // Created two objects A and B of class Matrix.
-###### A.setMatrix();           // Setting values of A.
-###### B.setMatrix();           // Setting values of B.
-###### Matrix C = A + B;     // Value of C will become equal to sum of A and B.
-###### Matrix C = A - B;     // Value of C will become equal to difference of A and B.
-###### Matrix C = A * B;     // Value of C will become equal to matrix multiplaction of A and B.
+#### Matrix Operations : |
+------------------------ | ----------------------------------------------------------------
+###### Matrix A;         |      // Created an objects A of class Matrix.
+###### int b;            |      // Created an int b.
+###### A.setMatrix();    |      // Setting values of A.
+###### Matrix C = A + b; |   // Value of C will become equal to sum of A and B.
+###### Matrix C = A - b; |   // Value of C will become equal to difference of A and B.
+###### Matrix C = A * b; |   // Value of C will become equal to matrix multiplaction of A and B.
+
+#### Matrix Operations : |
+------------------------ | -------------------------------------------------------------------
+###### Matrix A, B;      |      // Created two objects A and B of class Matrix.
+###### A.setMatrix();    |      // Setting values of A.
+###### B.setMatrix();    |      // Setting values of B.
+###### Matrix C = A + B; |   // Value of C will become equal to sum of A and B.
+###### Matrix C = A - B; |   // Value of C will become equal to difference of A and B.
+###### Matrix C = A * B; |   // Value of C will become equal to matrix multiplaction of A and B.
