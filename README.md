@@ -2,7 +2,7 @@
 ###### This file contains class matrix..
 ###### One can include this file in program as ```#include "matrix.h"```
 ###### Using this file one can create an object of class Matrix...
-
+ 
 #### Methods :
 ######  Matrix A;               // Created an object A of class Matrix.
 ###### 1. A.setMatrix() : This will prompt user for the size of matrix as number of rows and colomn.
