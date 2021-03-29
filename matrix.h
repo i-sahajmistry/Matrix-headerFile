@@ -12,6 +12,8 @@ private:
     vector<vector<float>> matrix;
     vector<pair<int, int>> pivote;
     pair<int, int> lastPivote;
+
+    // Private Methods
     void findNextPivote();
     void takePivoteRowAbove(pair<int, int>);
     void makeBelowPivoteZero(pair<int, int>);
@@ -24,9 +26,19 @@ public:
         n = a;
         m = b;
     }
+
+    // Matrix Operations
     Matrix operator*(Matrix);
     Matrix operator+(Matrix);
     Matrix operator-(Matrix);
+
+    // Scaler Operations
+    friend Matrix operator*(Matrix, int);
+    friend Matrix operator/(Matrix, int);
+    friend Matrix operator+(Matrix, int);
+    friend Matrix operator-(Matrix, int);
+
+    // Class Methods
     void setMatrix();
     void display();
     void makeRREF();
@@ -334,6 +346,66 @@ Matrix Matrix ::operator-(Matrix Mat)
     return diff;
 }
 
+
+/************************************Scaler operator * overloading***************************/
+
+Matrix operator*(Matrix Mat, int a)
+{
+    Matrix product(Mat.n, Mat.m);
+    for (int i = 0; i < Mat.n; i++)
+    {
+        for (int j = 0; j < Mat.m; j++)
+        {
+            Mat.matrix[i][j] *= a;
+        }
+    }
+    return product;
+}
+
+/************************************Scaler operator / overloading***************************/
+
+Matrix operator/(Matrix Mat, int a)
+{
+    Matrix product(Mat.n, Mat.m);
+    for (int i = 0; i < Mat.n; i++)
+    {
+        for (int j = 0; j < Mat.m; j++)
+        {
+            Mat.matrix[i][j] /= a;
+        }
+    }
+    return product;
+}
+
+/************************************Scaler operator + overloading***************************/
+
+Matrix operator+(Matrix Mat, int a)
+{
+    Matrix sum(Mat.n, Mat.m);
+    for (int i = 0; i < Mat.n; i++)
+    {
+        for (int j = 0; j < Mat.m; j++)
+        {
+            Mat.matrix[i][j] += a;
+        }
+    }
+    return sum;
+}
+
+/************************************Scaler operator - overloading***************************/
+
+Matrix operator-(Matrix Mat, int a)
+{
+    Matrix diff(Mat.n, Mat.m);
+    for (int i = 0; i < Mat.n; i++)
+    {
+        for (int j = 0; j < Mat.m; j++)
+        {
+            Mat.matrix[i][j] -= a;
+        }
+    }
+    return diff;
+}
 
 /************************************Defining Function of Inverse*****************************/
 
